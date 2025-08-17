@@ -1,0 +1,14 @@
+int count,hours;
+hours=(s[0]-'0')*10+s[1]-'0';
+count = strlen(s);
+if(s[count-2]=='P' && hours!=12){
+    hours=hours+12;
+    s[0]=hours/10+'0';
+    s[1]=hours%10+'0';
+    }
+else if (s[count-2]=='A' && hours==12){
+    s[0]='0';
+    s[1]='0';
+}
+s[8]='\0';
+return s;
